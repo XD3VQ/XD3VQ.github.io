@@ -1,199 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>LetterQuest</title>
-<style>
-  :root{
-    --bg:#0f172a;--panel:#0b1220;--tile:#1e293b;--text:#e6eef8;
-    --green:#0ea5a0;--yellow:#f59e0b;--muted:#64748b;
-  }
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); display:flex; align-items:center; justify-content:center; height:100vh; margin:0;}
-  .app{width:360px; padding:18px; background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,.6);}
-  h1{margin:0 0 8px; font-size:18px;}
-  .info{display:flex; justify-content:space-between; gap:8px; margin-bottom:12px; font-size:13px; color:var(--muted);}
-  .grid{display:grid; grid-template-rows:repeat(6,48px); gap:6px; margin-bottom:10px;}
-  .row{display:grid; grid-template-columns:repeat(5,1fr); gap:6px;}
-  .tile{background:var(--tile); border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:700; letter-spacing:2px; font-size:18px; color:var(--text);}
-  .controls{display:flex; gap:6px; margin-bottom:8px;}
-  button{padding:8px 10px; border-radius:8px; background:#0b1220; color:var(--text); border:1px solid rgba(255,255,255,0.03); cursor:pointer;}
-  input[type="text"]{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071025;color:var(--text);}
-  .small{font-size:13px;color:var(--muted)}
-  .leaderboard{margin-top:10px;font-size:13px;color:var(--muted)}
-  .toast{margin-top:8px;color:var(--muted);font-size:13px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetterQuest</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app" role="application" aria-label="LetterQuest game">
-  <h1>LetterQuest</h1>
-  <div class="info">
-    <div><span id="points">Points: 0</span></div>
-    <div class="small">Streak: <span id="streak">0</span></div>
-  </div>
+    <header>
+        <h1>LetterQuest</h1>
+        <p>Test your word skills and conquer the quest!</p>
+    </header>
 
-  <div class="grid" id="grid"></div>
+    <main>
+        <!-- Game Area -->
+        <section id="game-container">
+            <div id="score-board">
+                <span>Score: </span><span id="score">0</span>
+            </div>
+            <div id="word-display">
+                <!-- Letters or blanks for current word -->
+            </div>
+            <div id="letter-buttons">
+                <!-- Letter buttons will be generated here -->
+            </div>
+            <button id="restart-btn">Restart Game</button>
+        </section>
+    </main>
 
-  <div class="controls">
-    <input id="guessInput" type="text" maxlength="5" placeholder="enter 5-letter word" aria-label="enter guess"/>
-    <button id="submitBtn">Guess</button>
-    <button id="newBtn">New</button>
-  </div>
+    <footer>
+        <p>&copy; 2025 LetterQuest</p>
+    </footer>
 
-  <div class="toast" id="toast">Guess a 5-letter word. No ads — works offline.</div>
-
-  <div class="leaderboard">
-    <div><strong>Total points:</strong> <span id="totalPoints">0</span></div>
-    <div style="margin-top:6px"><strong>Local leaderboard</strong></div>
-    <ol id="leaderList"></ol>
-  </div>
-</div>
-
-<script>
-const WORDS = ["APPLE","BRAVE","CLOUD","DANCE","EPOCH","FLASH","GRAIL","HONEY","INPUT","JAZZY","KNIFE","LIGHT","MIGHT","NURSE","OCEAN","PRIDE","QUERY","RIVER","SNAKE","TRUST","UNITE","VIVID","WOMAN","XENON","YOUNG","ZEBRA"];
-const MAX_ROWS = 6, COLS = 5;
-
-let target = "";
-let row = 0;
-let gridState = Array.from({length:MAX_ROWS}, ()=>Array(COLS).fill(""));
-let colors = Array.from({length:MAX_ROWS}, ()=>Array(COLS).fill(""));
-
-const $ = id => document.getElementById(id);
-
-function randWord(){ return WORDS[Math.floor(Math.random()*WORDS.length)]; }
-
-function init(){
-  target = randWord();
-  row = 0;
-  gridState = Array.from({length:MAX_ROWS}, ()=>Array(COLS).fill(""));
-  colors = Array.from({length:MAX_ROWS}, ()=>Array(COLS).fill(""));
-  renderGrid();
-  updateMeta();
-  toast("New game started!");
-}
-
-function renderGrid(){
-  const grid = $("grid");
-  grid.innerHTML = "";
-  for(let r=0;r<MAX_ROWS;r++){
-    const rowEl = document.createElement("div");
-    rowEl.className = "row";
-    for(let c=0;c<COLS;c++){
-      const t = document.createElement("div");
-      t.className = "tile";
-      t.textContent = gridState[r][c] || "";
-      if(colors[r][c]){
-        if(colors[r][c]==="green") t.style.background = "var(--green)";
-        if(colors[r][c]==="yellow") t.style.background = "var(--yellow)";
-        if(colors[r][c]==="gray") t.style.opacity = "0.6";
-      }
-      rowEl.appendChild(t);
-    }
-    grid.appendChild(rowEl);
-  }
-}
-
-function toast(msg){ $("toast").textContent = msg; }
-
-function submitGuess(){
-  const input = $("guessInput");
-  const val = input.value.trim().toUpperCase();
-  if(val.length !== COLS){ toast("Type 5 letters."); return; }
-  if(row >= MAX_ROWS){ toast("No attempts left."); return; }
-
-  for(let c=0;c<COLS;c++) gridState[row][c] = val[c];
-
-  let tempTarget = target.split("");
-  for(let c=0;c<COLS;c++){
-    if(val[c]===tempTarget[c]){ colors[row][c]="green"; tempTarget[c]=null; }
-  }
-  for(let c=0;c<COLS;c++){
-    if(colors[row][c]) continue;
-    let idx = tempTarget.indexOf(val[c]);
-    if(idx!=-1){ colors[row][c]="yellow"; tempTarget[idx]=null; }
-    else colors[row][c]="gray";
-  }
-
-  renderGrid();
-
-  if(val===target){
-    win(row);
-    return;
-  }
-
-  row++;
-  if(row>=MAX_ROWS){
-    toast("Out of attempts! Word was "+target+".");
-    lose();
-  }
-
-  input.value="";
-}
-
-function win(attempt){
-  toast("You win! The word was "+target);
-  let points = 100 - attempt*10;
-  updatePoints(points);
-  updateStreak(1);
-  saveLeaderboard(points);
-}
-
-function lose(){
-  updateStreak(0,true);
-}
-
-function loadStorage(){
-  return JSON.parse(localStorage.getItem("LQ_DATA")||"{}");
-}
-
-function saveStorage(data){
-  localStorage.setItem("LQ_DATA",JSON.stringify(data));
-}
-
-function updatePoints(p){
-  let d = loadStorage();
-  d.total = (d.total||0)+p;
-  saveStorage(d);
-  updateMeta();
-}
-
-function updateStreak(v,reset=false){
-  let d = loadStorage();
-  if(reset) d.streak=0;
-  else d.streak=(d.streak||0)+v;
-  saveStorage(d);
-  updateMeta();
-}
-
-function saveLeaderboard(score){
-  let d = loadStorage();
-  d.leader = d.leader||[];
-  d.leader.push(score);
-  d.leader.sort((a,b)=>b-a);
-  d.leader = d.leader.slice(0,10);
-  saveStorage(d);
-  updateMeta();
-}
-
-function updateMeta(){
-  let d = loadStorage();
-  $("totalPoints").textContent = d.total||0;
-  $("streak").textContent = d.streak||0;
-  let list = $("leaderList"); list.innerHTML="";
-  (d.leader||[]).forEach(s=>{
-    let li=document.createElement("li"); li.textContent=s;
-    list.appendChild(li);
-  });
-}
-
-$("submitBtn").onclick = submitGuess;
-$("newBtn").onclick = init;
-$("guessInput").addEventListener("keydown",e=>{
-  if(e.key==="Enter") submitGuess();
-});
-
-init();
-</script>
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
 </body>
 </html>
-
