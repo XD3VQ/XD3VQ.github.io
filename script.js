@@ -225,4 +225,4 @@ window.addEventListener('load', () => {
 // Console message for curious developers
 console.log('%c👋 Hello fellow developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #8b5cf6;');
-console.log('%cGitHub: https://github.com/yourusername', 'font-size: 12px; color: #6b7280;');
+console.log('%cGitHub: https://github.com/XD3VQ', 'font-size: 12px; color: #6b7280;');
