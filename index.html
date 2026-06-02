@@ -3,323 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sharan Venkatapathy - Developer & Designer Portfolio">
-    <title>Sharan Venkatapathy | Portfolio</title>
+    <meta name="description" content="Sharan Venkatapathy is a student developer building practical web and Android projects.">
+    <title>Sharan Venkatapathy | Student Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#home">Sharan Venkatapathy</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
-                <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-in">Hi, I'm <span class="highlight">Sharan Venkatapathy</span></h1>
-                <p class="fade-in">Software Developer | Tech Enthusiast</p>
-                <div class="hero-buttons fade-in">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div class="social-links fade-in">
-                    <a href="https://github.com/XD3VQ" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:sharanleodania@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="container nav-inner">
+                <a class="brand" href="#home" aria-label="Sharan Venkatapathy home">
+                    <span class="brand-mark" aria-hidden="true">SV</span>
+                    <span>Sharan Venkatapathy</span>
+                </a>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
+                <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#learning">Learning</a></li>
+                    <li><a class="nav-link" href="#experience">Experience</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Student developer</p>
+                    <h1>I like turning ideas into useful little tools.</h1>
+                    <p class="hero-lead">
+                        Hi, I'm Sharan. I build web and Android projects, learn by making things, and care about keeping technology practical, readable, and useful for real people.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#projects">See Projects</a>
+                        <a class="button secondary" href="mailto:sharanleodania@gmail.com">Email Me</a>
+                    </div>
+                    <div class="hero-links" aria-label="Profile links">
+                        <a href="https://github.com/XD3VQ" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>Hello! I'm Sharan Venkatapathy, a passionate software developer with a love for creating innovative solutions. I enjoy working on challenging projects and learning new technologies.</p>
-                    <p>I'm constantly expanding my skill set and staying current with emerging technologies. I'm always eager to take on new challenges and collaborate with others on meaningful projects.</p>
-                    <p>I believe in continuous learning and giving back to the community through open-source contributions and volunteer work. Let's connect and build something amazing together!</p>
-                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Frontend Development</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (ES6+)</li>
+                <aside class="profile-card" aria-label="Profile snapshot">
+                    <div class="profile-avatar" aria-hidden="true">SV</div>
+                    <div>
+                        <p class="card-label">Current focus</p>
+                        <h2>Learning, building, and polishing practical projects.</h2>
+                    </div>
+                    <p>
+                        I am most interested in projects where the idea is easy to explain and the details still make you think: Android tools, small web apps, AR experiments, and design work that makes something easier to use.
+                    </p>
+                    <ul class="snapshot-list">
+                        <li>Kotlin and Android development</li>
+                        <li>HTML, CSS, and JavaScript</li>
+                        <li>Python, Java, and project debugging</li>
                     </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">About me</p>
+                    <h2>Curious, hands-on, and still very much learning.</h2>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-server"></i></div>
-                    <h3>Backend Development</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>API Development</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>Other Developmennt lang</h3>
-                    <ul>
-                        <li>Mobile: Kotlin</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>Design & Others</h3>
-                    <ul>
-                        <li>UI/UX Design</li>
-                        <li>Figma</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Cad modelling using Autodesk tools</li>
-                    </ul>
+                <div class="section-copy">
+                    <p>
+                        I am a student developer who enjoys figuring out how software works by building things from scratch, breaking them, and improving them. I like projects that have a clear use: reminders people will actually see, tools that make information easier to understand, or apps that help someone do a task with less friction.
+                    </p>
+                    <p>
+                        I am not trying to sound like I have everything mastered. I am building my skills one project at a time, with a focus on writing clearer code, making better interfaces, and learning how to finish ideas instead of just starting them.
+                    </p>
+                    <p>
+                        Outside of personal projects, I have spent time in hackathons and volunteer roles where communication matters as much as the code. Those experiences have helped me get better at explaining ideas, working with other people, and staying useful under time pressure.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Smart Daily Wallpaper Scheduler</h3>
-                        <p>An Android app that automatically updates the user’s wallpaper every day based on their schedule and preferences. The app turns the phone background into a functional daily dashboard by displaying upcoming tasks, visual themes, and date-based styling. It solves the problem of forgetting daily plans by making important information visible at a glance without opening any apps.</p>
-                        <div class="project-tags">
-                            <span class="tag">Kotlin</span>
-                            <span class="tag">Android SDK</span>
-                            <span class="tag">WallpaperManager API</span>
-                            <span class="tag">WorkManager (Background Tasks)</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/XD3VQ/wallpaper-app" target="_blank" class="btn btn-small"><i class="fab fa-github"></i> Code</a>
-                            <!-- <a href="https://project1-demo.com" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                        </div>
-                    </div>
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Projects</p>
+                    <h2>Things I have been building.</h2>
+                    <p>
+                        These are practical projects I can keep improving over time. Some are finished enough to share, and some are prototypes where the next step is making the idea more reliable.
+                    </p>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-top">
+                            <p class="project-type">Android app</p>
+                            <h3>Smart Daily Wallpaper Scheduler</h3>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Wall Scanner 3D Pro (Prototype)</h3>
-                        <p>A work-in-progress Android AR app that explores real-time wall scanning and 3D room reconstruction using ARCore + on-device ML. The goal is to detect walls and common wall elements (outlets, switches, windows, doors) and generate exportable 3D models for renovation or visualization. Some modules are functional (AR wall detection + basic model generation), while advanced recognition and full-room completion are still being improved.</p>
-                        <div class="project-tags">
-                            <span class="tag">Kotlin</span>
-                            <span class="tag">ARCore</span>
-                            <span class="tag">OpenCV</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/XD3VQ/3dscannerapp" target="_blank" class="btn btn-small"><i class="fab fa-github"></i> Code</a>
-                            <!-- <a href="https://project2-demo.com" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                        </div>
-                    </div>
-                </div>
+                        <p>
+                            An Android project that changes the user's wallpaper based on their schedule and preferences. The idea is to make the phone background work like a quiet daily dashboard, with tasks and date-based visual changes visible without opening another app.
+                        </p>
+                        <p>
+                            This project helped me work with background tasks, Android system APIs, and the challenge of making useful information feel simple instead of cluttered.
+                        </p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li>Kotlin</li>
+                            <li>Android SDK</li>
+                            <li>WallpaperManager API</li>
+                            <li>WorkManager</li>
+                        </ul>
+                        <a class="text-link" href="https://github.com/XD3VQ/wallpaper-app" target="_blank" rel="noopener">View code on GitHub</a>
+                    </article>
 
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-chart-line"></i>
+                    <article class="project-card">
+                        <div class="project-top">
+                            <p class="project-type">Android AR prototype</p>
+                            <h3>Wall Scanner 3D Pro</h3>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Title 3</h3>
-                        <p>Brief description of your project. What problem does it solve? What technologies did you use?</p>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">D3.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/XD3VQ/project3" target="_blank" class="btn btn-small"><i class="fab fa-github"></i> Code</a>
-                            <!-- <a href="https://project3-demo.com" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Hackathons Section -->
-    <section id="hackathons" class="hackathons">
-        <div class="container">
-            <h2 class="section-title">Hackathons</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="timeline-content">
-                        <h3>MRU Hacks</h3>
-                        <span class="timeline-date">October 2025</span>
-                        <p>Developed a safety-focused mobile application during MRU Hacks by collaborating with a team to design features, implement core functionality, and test the app within a limited time frame. Contributed to coding, debugging, and improving user experience while working under tight deadlines. Presented the final mobile application to judges and participants, demonstrating practical problem-solving and rapid development skills.</p>
-                        <div class="project-tags">
-                            <span class="tag">Participant</span>
-                            <span class="tag">Kotlin(more vibe coding)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon"><i class="fas fa-medal"></i></div>
-                    <div class="timeline-content">
-                        <h3>Hack the bias</h3>
-                        <span class="timeline-date">Jan 2026</span>
-                        <p>Designed and developed a web platform focused on reducing hiring bias and improving employment access for teenagers in Canada. Built a profile-based system that allows youth to showcase skills, volunteer experience, projects, verified hours, availability schedules, and supervisor feedback. The platform emphasizes real effort and reliability metrics instead of traditional résumé timelines.Description of the hackathon, your project, and achievements. Mention your role, technologies used, and any awards won.</p>
-                        <div class="project-tags">
-                            <span class="tag">Participant</span>
-                            <span class="tag">Html/Css/JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="timeline-item">
-                    <div class="timeline-icon"><i class="fas fa-award"></i></div>
-                    <div class="timeline-content">
-                        <h3>Hackathon Name 3</h3>
-                        <span class="timeline-date">Month Year</span>
-                        <p>Description of the hackathon, your project, and achievements. Mention your role, technologies used, and any awards won.</p>
-                        <div class="project-tags">
-                            <span class="tag">Participant</span>
-                            <span class="tag">Tech Stack Used</span>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Volunteer Section -->
-    <section id="volunteer" class="volunteer">
-        <div class="container">
-            <h2 class="section-title">Volunteer Experience</h2>
-            <div class="volunteer-grid">
-                <div class="volunteer-card">
-                    <div class="volunteer-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Calgary Public Library</h3>
-                    <span class="volunteer-role">Teen tech lead</span>
-                    <span class="volunteer-date">Dec 2025 - Present</span>
-                    <p>Supported teens and community members in a creative makerspace environment by providing hands-on technology assistance and guidance. Helped users operate digital tools and equipment, troubleshoot basic technical issues, and complete projects efficiently. Maintained an organized and safe workspace while collaborating with library staff to ensure smooth daily operations. Developed strong communication, customer service, and teamwork skills through direct public interaction.</p>
-                </div>
-
-                <div class="volunteer-card">
-                    <div class="volunteer-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Planet Youth</h3>
-                    <span class="volunteer-role">Teen organizing volunteer</span>
-                    <span class="volunteer-date">March 2025 - Present</span>
-                    <p>Contributed to youth-focused community initiatives by supporting event setup, outreach activities, and program operations. Assisted in engaging participants, promoting positive youth development, and maintaining a welcoming and inclusive environment. Worked alongside team members to ensure smooth execution of activities while developing leadership, communication, and organizational skills.</p>
-                </div>
-
-                <div class="volunteer-card">
-                    <div class="volunteer-icon"><i class="fas fa-users"></i></div>
-                    <h3>YMCA</h3>
-                    <span class="volunteer-role">Event organizing volunteer</span>
-                    <span class="volunteer-date">May 2025 - Present</span>
-                    <p>Supported community programs by assisting staff with daily operations, participant engagement, and activity setup. Helped create a safe, inclusive, and welcoming environment for youth and community members. Developed strong teamwork, communication, and responsibility skills while contributing to program success and positive member experiences.</p>
+                        <p>
+                            A work-in-progress Android AR prototype for wall scanning and basic 3D room reconstruction. The goal is to detect walls and common wall elements, then create exportable models that could help with renovation planning or room visualization.
+                        </p>
+                        <p>
+                            The project is still evolving, especially around recognition accuracy and full-room completion. It has been a good way to explore ARCore, computer vision ideas, and the limits of on-device processing.
+                        </p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li>Kotlin</li>
+                            <li>ARCore</li>
+                            <li>OpenCV</li>
+                            <li>3D modeling concepts</li>
+                        </ul>
+                        <a class="text-link" href="https://github.com/XD3VQ/3dscannerapp" target="_blank" rel="noopener">View code on GitHub</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:sharanleodania@gmail.com">sharanleodania@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/XD3VQ" target="_blank">github.com/XD3VQ</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank">linkedin.com/in/sharan-venkatapathy</a>
-                        </div>
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-heading compact">
+                    <p class="section-kicker">Skills</p>
+                    <h2>Tools and topics I work with.</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>Web</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Responsive layouts</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Android</h3>
+                        <ul>
+                            <li>Kotlin</li>
+                            <li>Android SDK</li>
+                            <li>WorkManager</li>
+                            <li>WallpaperManager API</li>
+                            <li>ARCore basics</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>API basics</li>
+                            <li>Debugging</li>
+                            <li>Project documentation</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Design and making</h3>
+                        <ul>
+                            <li>UI/UX design</li>
+                            <li>Figma</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                            <li>CAD modeling with Autodesk tools</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section learning-section" id="learning">
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">What I'm learning</p>
+                    <h2>The next version is always the interesting part.</h2>
+                </div>
+                <div class="learning-list">
+                    <article>
+                        <h3>Cleaner Android architecture</h3>
+                        <p>Improving how I structure Android projects so features are easier to test, change, and explain later.</p>
+                    </article>
+                    <article>
+                        <h3>AR and computer vision</h3>
+                        <p>Learning the basics behind room scanning, object detection, and the tradeoffs between accuracy and performance.</p>
+                    </article>
+                    <article>
+                        <h3>Better front-end polish</h3>
+                        <p>Practicing spacing, contrast, accessibility, and small interaction details so pages feel finished instead of just functional.</p>
+                    </article>
+                    <article>
+                        <h3>Writing better project notes</h3>
+                        <p>Getting better at documenting what a project does, what is unfinished, and what I learned while building it.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Experience</p>
+                    <h2>Hackathons and volunteering.</h2>
+                    <p>
+                        These roles have helped me practice teamwork, communication, and building under real constraints.
+                    </p>
+                </div>
+
+                <div class="experience-layout">
+                    <div class="experience-column">
+                        <h3 class="column-title">Hackathons</h3>
+
+                        <article class="experience-card">
+                            <div class="experience-meta">
+                                <span>MRU Hacks</span>
+                                <span>October 2025</span>
+                            </div>
+                            <p>
+                                Worked with a team on a safety-focused mobile app during a short hackathon build. I contributed to coding, debugging, user experience improvements, and presenting the final project to judges and participants.
+                            </p>
+                            <ul class="tag-list">
+                                <li>Participant</li>
+                                <li>Kotlin</li>
+                                <li>Mobile app</li>
+                            </ul>
+                        </article>
+
+                        <article class="experience-card">
+                            <div class="experience-meta">
+                                <span>Hack the Bias</span>
+                                <span>January 2026</span>
+                            </div>
+                            <p>
+                                Helped design and build a web platform focused on reducing hiring bias for teenagers in Canada. The project centered on profiles that show skills, volunteer work, projects, verified hours, availability, and supervisor feedback.
+                            </p>
+                            <ul class="tag-list">
+                                <li>Participant</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="experience-column">
+                        <h3 class="column-title">Volunteer work</h3>
+
+                        <article class="experience-card">
+                            <div class="experience-meta">
+                                <span>Calgary Public Library</span>
+                                <span>December 2025 - Present</span>
+                            </div>
+                            <p>
+                                Support teens and community members in a makerspace setting by helping with digital tools, basic troubleshooting, project setup, and keeping the workspace organized and safe.
+                            </p>
+                            <p class="role-label">Teen tech lead</p>
+                        </article>
+
+                        <article class="experience-card">
+                            <div class="experience-meta">
+                                <span>Planet Youth</span>
+                                <span>March 2025 - Present</span>
+                            </div>
+                            <p>
+                                Help with youth-focused community initiatives, including event setup, outreach, participant engagement, and creating a welcoming environment for activities.
+                            </p>
+                            <p class="role-label">Teen organizing volunteer</p>
+                        </article>
+
+                        <article class="experience-card">
+                            <div class="experience-meta">
+                                <span>YMCA</span>
+                                <span>May 2025 - Present</span>
+                            </div>
+                            <p>
+                                Assist with community programs, activity setup, and participant support while practicing teamwork, communication, and responsibility.
+                            </p>
+                            <p class="role-label">Event organizing volunteer</p>
+                        </article>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Sharan Venkatapathy. All rights reserved.</p>
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-kicker">Contact</p>
+                    <h2>Want to connect?</h2>
+                    <p>
+                        I am open to project ideas, feedback, hackathon conversations, and opportunities to learn from people working on interesting things.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <a href="mailto:sharanleodania@gmail.com">
+                        <span>Email</span>
+                        <strong>sharanleodania@gmail.com</strong>
+                    </a>
+                    <a href="https://github.com/XD3VQ" target="_blank" rel="noopener">
+                        <span>GitHub</span>
+                        <strong>github.com/XD3VQ</strong>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank" rel="noopener">
+                        <span>LinkedIn</span>
+                        <strong>linkedin.com/in/sharan-venkatapathy</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Sharan Venkatapathy.</p>
             <div class="footer-links">
-                <a href="https://github.com/XD3VQ" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/XD3VQ" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sharan-venkatapathy/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
     </footer>

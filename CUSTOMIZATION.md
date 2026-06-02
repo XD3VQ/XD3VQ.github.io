@@ -1,136 +1,78 @@
-# Portfolio Website Customization Guide
+# Portfolio Customization Notes
 
-This guide will help you personalize your portfolio website with your own information.
+This site is intentionally simple: edit the files, open `index.html` in a browser, and push to GitHub Pages when it looks right.
 
-## Quick Start Checklist
+## Keep the Voice Personal
 
-### 1. Basic Information (index.html)
-- [ ] Line 6: Change page title from "Portfolio | Your Name"
-- [ ] Line 31: Update hero name from "Your Name"
-- [ ] Line 32: Update tagline "Developer | Designer | Problem Solver"
-- [ ] Lines 36-39: Update social media links (GitHub, LinkedIn, Twitter, Email)
+The current writing is meant to sound like a real student/developer profile: honest, specific, and not inflated. When updating the site, avoid empty buzzwords about ambition, innovation, expertise, or future-facing technology.
 
-### 2. About Me Section (index.html, lines 56-77)
-- [ ] Lines 63-65: Write your personal introduction
-- [ ] Replace placeholder text "[your journey here]" and "[your specializations]"
-- [ ] Replace "[your hobbies/interests]" with actual interests
-- [ ] Optional: Replace user icon with your photo (update lines 59-61)
+Better wording is usually more direct:
 
-### 3. Skills Section (index.html, lines 83-130)
-- [ ] Update skills in each category to match your expertise
-- [ ] Add or remove skill categories as needed
-- [ ] Customize icons (Font Awesome classes) if desired
+- I built this to solve...
+- This project helped me learn...
+- The next part I want to improve is...
+- I am still working on...
 
-### 4. Projects Section (index.html, lines 136-218)
-- [ ] For each project card (3 total):
-  - Update project title
-  - Write project description
-  - Update technology tags
-  - Replace GitHub link (https://github.com/yourusername/projectX)
-  - Replace live demo link
-- [ ] Add more project cards by copying the structure
-- [ ] Optional: Replace gradient placeholders with project screenshots
+## Main Sections in `index.html`
 
-### 5. Hackathons Section (index.html, lines 224-273)
-- [ ] Update hackathon names and dates
-- [ ] Write descriptions of your achievements
-- [ ] Update technology tags
-- [ ] Change award badges (Winner, Finalist, Participant)
+- Hero: short intro, email link, GitHub, and LinkedIn
+- About: personal background and working style
+- Projects: real projects with specific descriptions and GitHub links
+- Skills: technologies grouped by practical area
+- What I'm Learning: current learning goals
+- Experience: hackathons and volunteer work
+- Contact: email, GitHub, and LinkedIn
 
-### 6. Volunteer Experience (index.html, lines 279-310)
-- [ ] Update organization names
-- [ ] Add your role/position
-- [ ] Update date ranges
-- [ ] Write descriptions of your contributions
-- [ ] Change icons if desired (fas fa-hands-helping, fa-heart, fa-users)
+## Updating Projects
 
-### 7. Contact Section (index.html, lines 316-360)
-- [ ] Line 324: Update email address (2 places)
-- [ ] Line 328: Update location
-- [ ] Lines 332-336: Update GitHub and LinkedIn URLs
-- [ ] Optional: Integrate with a form service (see below)
+Each project card is an `<article class="project-card">`. When adding or replacing a project, keep the description specific:
 
-### 8. Footer (index.html, lines 366-376)
-- [ ] Line 368: Copyright text updates automatically with current year
-- [ ] Lines 370-372: Update social media links
-
-## Advanced Customizations
-
-### Color Scheme (styles.css, lines 5-16)
-```css
---primary-color: #6366f1;    /* Main brand color */
---secondary-color: #8b5cf6;  /* Secondary brand color */
---accent-color: #ec4899;     /* Accent highlights */
-```
-
-### Hero Background Gradient (styles.css, line 238)
-```css
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-```
-
-### Adding Your Photo
-Replace the icon placeholder (lines 59-61) with:
 ```html
-<div class="about-image">
-    <img src="path/to/your-photo.jpg" alt="Your Name" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-xl);">
-</div>
+<article class="project-card">
+    <div class="project-top">
+        <p class="project-type">Project type</p>
+        <h3>Project Name</h3>
+    </div>
+    <p>
+        One or two sentences about what the project does and why it exists.
+    </p>
+    <p>
+        One sentence about what you learned, what is working, or what still needs improvement.
+    </p>
+    <ul class="tag-list" aria-label="Technologies used">
+        <li>Technology</li>
+        <li>Technology</li>
+    </ul>
+    <a class="text-link" href="https://github.com/XD3VQ/repo-name" target="_blank" rel="noopener">View code on GitHub</a>
+</article>
 ```
 
-### Adding Project Images
-Replace project placeholders (e.g., lines 140-144) with:
-```html
-<div class="project-image">
-    <img src="path/to/project-screenshot.jpg" alt="Project Name" style="width: 100%; height: 200px; object-fit: cover;">
-</div>
-```
+If a project is still a prototype, say that clearly. A work-in-progress project can still look good when the scope is honest.
 
-### Contact Form Integration
+## Updating Links
 
-The form currently shows an alert. To make it functional, integrate with:
+Current links used throughout the site:
 
-**Option 1: Formspree (Recommended)**
-```html
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
+- GitHub: `https://github.com/XD3VQ`
+- LinkedIn: `https://www.linkedin.com/in/sharan-venkatapathy/`
+- Email: `sharanleodania@gmail.com`
 
-**Option 2: EmailJS**
-Update script.js contactForm event listener to use EmailJS API.
+Search for the old value before changing a link so every copy stays consistent.
 
-**Option 3: Netlify Forms**
-Add `netlify` attribute to form tag and `name` attributes to inputs.
+## Styling
 
-### Adding More Sections
-Copy an existing section structure and modify. Remember to:
-1. Add navigation link in the navbar
-2. Add section anchor ID
-3. Style consistently with existing sections
+Most design choices live in `styles.css` near the top under `:root`. The color palette is light, clean, and restrained. If you change colors, keep the contrast high enough for readable text and buttons.
 
-### Mobile Responsiveness
-The site is already mobile-responsive. Test by resizing browser or checking Chrome DevTools.
+Cards use an 8px border radius and subtle hover states. Avoid adding heavy animations or large decorative effects unless they make the page easier to understand.
 
-## Deployment to GitHub Pages
+## Deployment
 
-1. Go to repository Settings → Pages
-2. Select source branch (this branch or main after merging)
-3. Select folder: `/` (root)
-4. Click Save
-5. Wait 1-2 minutes for deployment
-6. Access at: https://xd3vq.github.io/
+GitHub Pages can serve this repository directly from the root:
 
-## Tips
+1. Open the repository settings on GitHub.
+2. Go to Pages.
+3. Choose the branch you want to publish.
+4. Choose `/` as the folder.
+5. Save and wait for GitHub Pages to rebuild.
 
-- Use high-quality images (compress them first)
-- Keep descriptions concise and impactful
-- Test all links before publishing
-- Use consistent naming for GitHub username across all links
-- Consider SEO: update meta tags in `<head>` section
-- Test on multiple devices and browsers
-
-## Need Help?
-
-- Font Awesome Icons: https://fontawesome.com/icons
-- Color Schemes: https://coolors.co/
-- Free Images: https://unsplash.com/
-- Gradient Generator: https://cssgradient.io/
-
-Happy customizing! 🚀
+The site should be available at `https://xd3vq.github.io/`.
