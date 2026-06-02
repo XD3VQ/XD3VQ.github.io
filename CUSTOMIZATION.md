@@ -19,7 +19,7 @@ Better wording is usually more direct:
 - About: personal background and working style
 - Projects: a featured project plus smaller project cards with specific descriptions and GitHub links
 - Home Lab / NAS Setup: storage, backups, network sharing, and the SmartHub connection
-- Skills: technologies grouped by practical area
+- Skills: technologies, hardware interests, and systems topics grouped by practical area
 - What I'm Learning: current learning goals
 - Experience: hackathons and volunteer work
 - Contact: email, GitHub, and LinkedIn
