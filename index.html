@@ -27,6 +27,7 @@
                 <ul class="nav-menu" id="nav-menu">
                     <li><a class="nav-link" href="#about">About</a></li>
                     <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#home-lab">Home Lab</a></li>
                     <li><a class="nav-link" href="#skills">Skills</a></li>
                     <li><a class="nav-link" href="#learning">Learning</a></li>
                     <li><a class="nav-link" href="#experience">Experience</a></li>
@@ -99,9 +100,59 @@
                     <p class="section-kicker">Projects</p>
                     <h2>Things I have been building.</h2>
                     <p>
-                        These are practical projects I can keep improving over time. Some are finished enough to share, and some are prototypes where the next step is making the idea more reliable.
+                        These are practical projects I can keep improving over time. Some are finished enough to share, and some are experiments where the next step is making the idea more reliable.
                     </p>
                 </div>
+
+                <article class="featured-project">
+                    <div class="featured-project-copy">
+                        <div class="featured-project-header">
+                            <p class="project-type">Featured project</p>
+                            <span class="status-label">Status: In progress / experimental</span>
+                        </div>
+                        <h3>SmartHub &mdash; Local AI Assistant Hub</h3>
+                        <p>
+                            SmartHub is my experimental local AI assistant project. I am building it as a modular hub that can connect local models with real computer actions, starting with browser control, YouTube search, simple task history, and app automation.
+                        </p>
+                        <p>
+                            The goal is to learn how local AI can actually help on a personal computer without relying only on cloud tools or stopping at chatbot replies. I am experimenting with local models through LM Studio, then connecting those responses to practical actions through tools like Python, FastAPI/Uvicorn, Playwright, and PyAutoGUI.
+                        </p>
+                        <p>
+                            I am also exploring how SmartHub could connect with my NAS/home lab setup, so the assistant can eventually be reached from devices at home instead of being tied to one machine.
+                        </p>
+                    </div>
+
+                    <div class="featured-project-details">
+                        <div>
+                            <h4>Early focus</h4>
+                            <ul>
+                                <li>Browser control</li>
+                                <li>YouTube search and video selection</li>
+                                <li>Task history</li>
+                                <li>Small app and desktop automations</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Future direction</h4>
+                            <ul>
+                                <li>YouTube and music modules</li>
+                                <li>Games and productivity tools</li>
+                                <li>Email workflows</li>
+                                <li>Home server and desktop automation modules</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="tag-list featured-tags" aria-label="Technologies used">
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>Uvicorn</li>
+                        <li>Playwright</li>
+                        <li>PyAutoGUI</li>
+                        <li>LM Studio</li>
+                        <li>Local AI</li>
+                    </ul>
+                </article>
 
                 <div class="projects-grid">
                     <article class="project-card">
@@ -143,6 +194,55 @@
                         </ul>
                         <a class="text-link" href="https://github.com/XD3VQ/3dscannerapp" target="_blank" rel="noopener">View code on GitHub</a>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section home-lab-section" id="home-lab">
+            <div class="container section-grid">
+                <div>
+                    <p class="section-kicker">Home Lab / NAS Setup</p>
+                    <h2>Storage, backups, and local access at home.</h2>
+                </div>
+                <div class="home-lab-content">
+                    <p>
+                        My NAS/home lab setup is where I experiment with storage, backups, file sharing, and local network access. I use it to keep files organized, practice syncing and backup workflows, and learn how devices talk to each other on a home network.
+                    </p>
+                    <p>
+                        I am also exploring how it can connect with my SmartHub project, so a local AI assistant can be accessed around the house instead of being tied to one machine. This is still in-progress, but it is helping me learn practical networking, storage, and self-hosting in a hands-on way.
+                    </p>
+
+                    <div class="home-lab-details">
+                        <article>
+                            <h3>What I use it for</h3>
+                            <ul>
+                                <li>File storage and organization</li>
+                                <li>Backups and syncing experiments</li>
+                                <li>SMB and network sharing</li>
+                                <li>Local access across home devices</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h3>What I am exploring</h3>
+                            <ul>
+                                <li>Remote access and local network experiments</li>
+                                <li>Self-hosted tools and services</li>
+                                <li>SmartHub access from multiple devices</li>
+                                <li>How local AI could run on or connect through a home server</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <ul class="tag-list home-lab-tags" aria-label="Home lab topics">
+                        <li>NAS</li>
+                        <li>Home Lab</li>
+                        <li>SMB</li>
+                        <li>Local Network</li>
+                        <li>Backups</li>
+                        <li>Self-Hosting</li>
+                        <li>SmartHub</li>
+                        <li>Local AI</li>
+                    </ul>
                 </div>
             </div>
         </section>

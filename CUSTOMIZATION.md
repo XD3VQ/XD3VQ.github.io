@@ -17,7 +17,8 @@ Better wording is usually more direct:
 
 - Hero: short intro, email link, GitHub, and LinkedIn
 - About: personal background and working style
-- Projects: real projects with specific descriptions and GitHub links
+- Projects: a featured project plus smaller project cards with specific descriptions and GitHub links
+- Home Lab / NAS Setup: storage, backups, network sharing, and the SmartHub connection
 - Skills: technologies grouped by practical area
 - What I'm Learning: current learning goals
 - Experience: hackathons and volunteer work
@@ -25,7 +26,9 @@ Better wording is usually more direct:
 
 ## Updating Projects
 
-Each project card is an `<article class="project-card">`. When adding or replacing a project, keep the description specific:
+SmartHub uses the larger `<article class="featured-project">` card at the top of the Projects section. Keep it for the project you most want people to notice first.
+
+Each smaller project card is an `<article class="project-card">`. When adding or replacing a project, keep the description specific:
 
 ```html
 <article class="project-card">
