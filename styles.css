@@ -855,3 +855,40 @@ ul {
         animation-iteration-count: 1 !important;
     }
 }
+
+
+/* WebMCP Agent Lab */
+.agent-lab-section {
+    color: #ffffff;
+    background: linear-gradient(135deg, #0b1020 0%, #13233f 58%, #0f766e 140%);
+}
+.agent-lab-section p { color: rgba(255,255,255,.76); }
+.agent-lab-section .section-kicker { color: #7dd3fc; }
+.agent-lab-section h2 { margin: 8px 0 18px; max-width: 700px; }
+.agent-lab-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr); gap:48px; align-items:start; }
+.agent-lab-lead { font-size:1.06rem; max-width:720px; }
+.agent-tool-list { display:grid; gap:10px; margin-top:26px; list-style:none; }
+.agent-tool-list li { display:grid; grid-template-columns:minmax(170px,.55fr) 1fr; gap:14px; padding:13px 15px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.055); border-radius:8px; }
+.agent-tool-list code { color:#a7f3d0; font-weight:800; }
+.agent-tool-list span { color:rgba(255,255,255,.76); }
+.agent-console { padding:26px; color:var(--ink); background:#ffffff; border:1px solid rgba(255,255,255,.3); border-radius:8px; box-shadow:0 22px 60px rgba(0,0,0,.25); }
+.agent-console p { color:var(--muted); }
+.agent-console-head { display:flex; justify-content:space-between; align-items:start; gap:18px; margin-bottom:20px; }
+.agent-console h3 { font-size:1.45rem; }
+.webmcp-status { padding:6px 9px; color:#475569; background:#f1f5f9; border-radius:999px; font-size:.78rem; font-weight:800; white-space:nowrap; }
+.webmcp-status.supported { color:#065f46; background:#d1fae5; }
+#opportunity-form { display:grid; gap:10px; }
+#opportunity-form label { font-weight:800; }
+#opportunity-form textarea { width:100%; resize:vertical; padding:13px; color:var(--ink); background:#fbfdff; border:1px solid var(--line); border-radius:8px; font:inherit; }
+#opportunity-form textarea:focus { border-color:var(--blue); outline:3px solid rgba(37,99,235,.15); }
+.agent-result { min-height:130px; margin-top:18px; padding:18px; background:#f3f6fa; border:1px solid #e4eaf2; border-radius:8px; }
+.agent-result h4 { margin-bottom:8px; }
+.agent-result ul { display:grid; gap:7px; margin-top:10px; padding-left:18px; color:var(--muted); }
+.agent-result-empty { display:grid; place-items:center; min-height:92px; text-align:center; }
+.privacy-note { margin-top:12px; font-size:.82rem; }
+@media (max-width:980px) { .agent-lab-grid { grid-template-columns:1fr; } }
+@media (max-width:620px) {
+    .agent-tool-list li { grid-template-columns:1fr; gap:4px; }
+    .agent-console-head { display:grid; }
+    .agent-console { padding:20px; }
+}
